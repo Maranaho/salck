@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { SlackContext } from "../context"
+import { SlackContext } from "../context.js"
 
 const User = () => {
     const { state:{ user } } = useContext(SlackContext)

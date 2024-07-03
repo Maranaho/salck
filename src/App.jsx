@@ -1,5 +1,5 @@
 import { useEffect, useReducer } from 'react'
-import { SlackContext,slackReducer, initialState } from './context'
+import { SlackContext,slackReducer, initialState } from './context.js'
 import useAuth from './hooks/useAuth'
 import './index.css'
 

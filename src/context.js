@@ -4,7 +4,7 @@ const initialState = {
     user: null
 }
 
-const slackReducer = (state,action)=>{
+const slackReducer = (state,action) => {
 
     switch (action.type) {
 
@@ -17,5 +17,6 @@ const slackReducer = (state,action)=>{
     }
 }
 
-const SlackContext = createContext({state:initialState,dispatch:null})
+const SlackContext = createContext({ state:initialState, dispatch: null })
+
 export { SlackContext, slackReducer, initialState } 
