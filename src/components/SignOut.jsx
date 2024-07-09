@@ -5,7 +5,7 @@ const SignOut = ()=>{
   return (
     <main className="SignOut">
       <button className="btn mini ghost" onClick={()=>auth.signOut()}>
-        <span>Sign out</span>
+        <span>Log out</span>
       </button>
     </main>
   )

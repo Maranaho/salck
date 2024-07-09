@@ -11,6 +11,7 @@ import {
     addDoc,
     updateDoc,
     Timestamp,
+    where,
     getFirestore,
 } from "firebase/firestore"
 
@@ -37,6 +38,7 @@ export {
     collection,
     query,
     orderBy,
+    where,
     startAfter,
     limit,
     getDocs,

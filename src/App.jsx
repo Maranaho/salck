@@ -1,6 +1,7 @@
 import { useEffect, useReducer } from 'react'
 import { SlackContext,slackReducer, initialState } from './context.js'
 import useAuth from './hooks/useAuth'
+import logUserToFB from './utils/logUserToFB'
 import './index.css'
 
 import SignIn from './components/SignIn'
@@ -15,6 +16,7 @@ const App = ()=>{
     if(user){
       const { displayName,email,photoURL } = user
       dispatch({type:'USER',payload:{displayName,email,photoURL}})
+      // logUserToFB(user)
     }
   }
 
@@ -23,12 +25,10 @@ useEffect(getUser,[user])
   return (
     <SlackContext.Provider value={{state,dispatch}}>
 
-      <main
-        className="SlackApp"
-      >
+      <>
         {user&&<SlackApp/>}
         {!user&&<SignIn/>}
-      </main>
+      </>
     </SlackContext.Provider>
   )
 }

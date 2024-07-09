@@ -1,14 +1,12 @@
-import SignOut from "./SignOut"
-import User from './User'
+import Topbar from './Topbar'
+import LeftPanel from './LeftPanel'
 
-const SlackApp = () => {
-
-    return (
-        <div>
-            <User/>
-            <SignOut/>
-        </div>
-    )
-}
-
+const SlackApp = () => (
+    <main className="SlackApp">
+        <Topbar/>
+        <section>
+            <LeftPanel/>
+        </section>
+    </main>
+)
 export default SlackApp
